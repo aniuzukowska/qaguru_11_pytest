@@ -22,14 +22,14 @@ def browser_mobile():
 
 
 def test_github_desktop(browser_desktop):
-    browser_desktop.element('//*[.="Sign in"]').click()
-    browser_desktop.should(have.url('https://github.com/login'))
+    browser.element('.HeaderMenu-link--sign-in').click()
+    browser.should(have.url('https://github.com/login'))
 
 
 def test_github_mobile(browser_mobile):
-    browser_mobile.element('.Button-label').click()
-    browser_mobile.element('//*[.="Sign in"]').click()
-    browser_mobile.should(have.url('https://github.com/login'))
+    browser.element('.Button-label').click()
+    browser.element('.HeaderMenu-link--sign-in').click()
+    browser.should(have.url('https://github.com/login'))
 
 
 
